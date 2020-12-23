@@ -1,7 +1,11 @@
 ﻿Feature: AddTwoNumbers
 
-Scenario: Add two numbers
-	Given the first number 30
-	And the second nimber 40
+Scenario Outline: Add two numbers
+	Given the first number <num1>
+	And the second nimber <num2>
 	When the two numbers added
-	Then the result should be 70
+	Then the result should be <total>
+	Example:
+	| num1 | num2 | total |
+	| 30   | 40   | 70    |
+	| 20   | 20   | 40    |
